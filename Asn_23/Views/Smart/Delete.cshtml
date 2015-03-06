@@ -1,0 +1,184 @@
+﻿@model Asn_23.Models.Smart
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Smart</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BadDateReport.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BadDateReport.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityOfAssault.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityOfAssault.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityOfResidence.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityOfResidence.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clients.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clients.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DrugFacilitatedAssault.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DrugFacilitatedAssault.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvidenceStored.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvidenceStored.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIVMeds.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIVMeds.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HospitalAttended.HospitalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HospitalAttended.HospitalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalOnly.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalOnly.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultiplePerpetrators.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultiplePerpetrators.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceAttendance.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceAttendance.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliceReported.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliceReported.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferredToCBVS.YesNoPVBSOnlyNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferredToCBVS.YesNoPVBSOnlyNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferringHospital.HospitalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferringHospital.HospitalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SexWorkExploitation.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SexWorkExploitation.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialWorkAttendance.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocialWorkAttendance.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThirdPartyReport.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThirdPartyReport.YesNoNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccompanimnetMinutes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccompanimnetMinutes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VictimServiceAttendanceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VictimServiceAttendanceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferredToNursePractitioner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferredToNursePractitioner)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

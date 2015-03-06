@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Asn 2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                    <li>@Html.ActionLink("Manage Users", "ManageUsers", "Admin")</li>
+                    <li>@Html.ActionLink("Manage Roles", "ManageRoles", "Admin")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenu1" aria-expanded="false">Lookup Tables<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation">@Html.ActionLink("Abuser Relationships", "Index", "AbuserRelationships")</li>
+                                <li role="presentation">@Html.ActionLink("Ages", "Index", "Ages")</li>
+                                <li role="presentation">@Html.ActionLink("Assigned Workers", "Index", "AssignedWorkers")</li>
+                                <li role="presentation">@Html.ActionLink("Bad Date Reports", "Index", "BadDateReports")</li>
+                                <li role="presentation">@Html.ActionLink("City Of Assaults", "Index", "CityOfAssaults")</li>
+                                <li role="presentation">@Html.ActionLink("City Of Residences", "Index", "CityOfResidences")</li>
+                                <li role="presentation">@Html.ActionLink("Crises", "Index", "Crises")</li>
+                                <li role="presentation">@Html.ActionLink("Drug Facilitated Assaults", "Index", "DrugFacilitatedAssaults")</li>
+                                <li role="presentation">@Html.ActionLink("Duplicate Files", "Index", "DuplicateFiles")</li>
+                                <li role="presentation">@Html.ActionLink("Ethnicities", "Index", "Ethnicities")</li>
+                                <li role="presentation">@Html.ActionLink("Evidence Stored", "Index", "EvidenceStoreds")</li>
+                                <li role="presentation">@Html.ActionLink("Family Violence Files", "Index", "FamilyViolenceFiles")</li>
+                                <li role="presentation">@Html.ActionLink("Fiscal Years", "Index", "FiscalYears")</li>
+                                <li role="presentation">@Html.ActionLink("HIV Meds", "Index", "HIVMeds")</li>
+                                <li role="presentation">@Html.ActionLink("Hospitals Attended", "Index", "HospitalAttendeds")</li>
+                                <li role="presentation">@Html.ActionLink("Incidents", "Index", "Incidents")</li>
+                                <li role="presentation">@Html.ActionLink("Medical Only", "Index", "MedicalOnlies")</li>
+                                <li role="presentation">@Html.ActionLink("Multiple Perpetrators", "Index", "MultiplePerpetrators")</li>
+                                <li role="presentation">@Html.ActionLink("Police Attendance", "Index", "PoliceAttendances")</li>
+                                <li role="presentation">@Html.ActionLink("Police Reported", "Index", "PoliceReporteds")</li>
+                                <li role="presentation">@Html.ActionLink("Programs", "Index", "Programs")</li>
+                                <li role="presentation">@Html.ActionLink("Referral Contacts", "Index", "ReferralContacts")</li>
+                                <li role="presentation">@Html.ActionLink("Referral Sources", "Index", "ReferralSources")</li>
+                                <li role="presentation">@Html.ActionLink("Referred To CBVS", "Index", "ReferredToCBVS")</li>
+                                <li role="presentation">@Html.ActionLink("Referring Hospitals", "Index", "ReferringHospitals")</li>
+                                <li role="presentation">@Html.ActionLink("Repeat Clients", "Index", "RepeatClients")</li>
+                                <li role="presentation">@Html.ActionLink("Risk Levels", "Index", "RiskLevels")</li>
+                                <li role="presentation">@Html.ActionLink("Risk Status", "Index", "RiskStatus")</li>
+                                <li role="presentation">@Html.ActionLink("Services", "Index", "Services")</li>
+                                <li role="presentation">@Html.ActionLink("Sex Work Exploitations", "Index", "SexWorkExploitations")</li>
+                                <li role="presentation">@Html.ActionLink("Social Work Attendances", "Index", "SocialWorkAttendances")</li>
+                                <li role="presentation">@Html.ActionLink("Status of Files", "Index", "StatusOfFiles")</li>
+                                <li role="presentation">@Html.ActionLink("Third Party Reports", "Index", "ThirdPartyReports")</li>
+                                <li role="presentation">@Html.ActionLink("Victim of Incidents", "Index", "VictimOfIncidents")</li>
+                                <li role="presentation">@Html.ActionLink("Victim Services Attendance", "Index", "VictimServicesAttendances")</li>
+                            </ul>
+                    </li>
+                    }
+                    else if (User.IsInRole("Worker"))
+                    {
+                        <li>@Html.ActionLink("Enter / Update Client Data", "", "")</li>
+                        <li>@Html.ActionLink("Generate Report", "", "")</li>
+                    }
+                    else if (User.IsInRole("Reporter"))
+                    {
+                        <li>@Html.ActionLink("Generate Report", "", "")</li>
+                    }
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

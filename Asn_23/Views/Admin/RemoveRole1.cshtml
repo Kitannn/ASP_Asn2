@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "RemoveRole - Choose User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <h2>Choose a user to remove a role</h2>
+    @if (ViewBag.Message != null)
+    {
+        string message = ViewBag.Message;
+        @message;
+    }
+    @using (Html.BeginForm("RemoveChooseRole", "Admin"))
+    {
+        <fieldset>
+            Users
+            @Html.DropDownList("Users")
+            <br />
+            <input type="submit" value="Choose Role" />
+        </fieldset>
+        @Html.ActionLink("Add Role", "Roles")
+    }
+</div>

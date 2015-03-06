@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "RemoveRole2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <h2>Choose a Role to Remove</h2>
+    @using (Html.BeginForm("RemoveRole", "Admin"))
+    {
+        <fieldset>
+            @Html.Hidden("userid", (object)ViewBag.UserId.ToString())
+            Roles
+            @Html.DropDownList("Roles")
+            <br />
+            <input type="submit" value="Remove Role" />
+        </fieldset>
+    }
+</div>

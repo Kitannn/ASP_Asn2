@@ -1,0 +1,26 @@
+﻿@model Asn_23.Models.VictimOfIncident
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Victim Of Incident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryOrSecondary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryOrSecondary)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VictimOfIncidentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

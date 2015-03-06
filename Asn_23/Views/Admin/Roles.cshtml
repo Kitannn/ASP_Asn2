@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Administration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <h1>Add User To Role</h1>
+    @if (ViewBag.Message != null)
+    {
+        string message = ViewBag.Message;
+        @message;
+    }
+    @using (Html.BeginForm("AddRole", "Admin"))
+    {
+        <fieldset>
+            Users
+            @Html.DropDownList("Users")
+            <br />
+            Roles
+            @Html.DropDownList("Roles")
+            <br />
+            <input type="submit" value="Add role" />
+        </fieldset>
+    }
+    @Html.ActionLink("Remove Roles", "Remove")
+</div>

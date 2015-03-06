@@ -1,0 +1,26 @@
+﻿@model Asn_23.Models.FamilyViolenceFile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Family Violence File</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FileExists)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileExists)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FamilyViolenceFileId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

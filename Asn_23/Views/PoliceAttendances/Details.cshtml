@@ -1,0 +1,26 @@
+﻿@model Asn_23.Models.PoliceAttendance
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Police Attendance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.YesNoNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YesNoNA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PoliceAttendanceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

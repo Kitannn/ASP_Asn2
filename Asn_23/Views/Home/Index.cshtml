@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Asn 2</h1>
+    <p class="lead">By Michael Chodolak and Edwin Pham.</p>
+    @using Microsoft.AspNet.Identity
+    @if (Request.IsAuthenticated)
+    {
+        if (User.IsInRole("Administrator"))
+        {
+            <p>
+                <a href="Admin/ManageUsers" class="btn btn-primary btn-lg">Manage Users</a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="Admin/ManageRoles" class="btn btn-primary btn-lg">Manage Roles</a>
+            </p>
+        }
+        else if (User.IsInRole("Worker"))
+        {
+            <p>
+                <a href="" class="btn btn-primary btn-lg">Enter / Update Client Data</a>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="" class="btn btn-primary btn-lg">Generate Report</a>
+            </p>
+        }
+        else if (User.IsInRole("Reporter"))
+        {
+            <p>
+                <a href="" class="btn btn-primary btn-lg">Generate Report</a>
+            </p>
+        }
+    }
+    else
+    {
+    <p>
+        <a href="Account/Register" class="btn btn-primary btn-lg">Register</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Account/Login" class="btn btn-primary btn-lg">Log In</a>
+    </p>
+    }
+</div>

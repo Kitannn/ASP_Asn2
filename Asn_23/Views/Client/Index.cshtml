@@ -1,0 +1,231 @@
+﻿@model IEnumerable<Asn_23.Models.Clients>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AbuserRelationship.Relationship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age.Range)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedWorker.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crisis.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DuplicateFile.YesOrNull)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ethnicity.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyViolenceFile.FileExists)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FiscalYear.Years)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Incident.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Program.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferralContact.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferralSource.Source)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatClient.YesOrNull)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RiskLevel.Level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RiskStatus.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service.File)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusOfFile.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VictimOfIncident.PrimaryOrSecondary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliceFileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourtFileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SWCFileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RiskAssessmentAssignedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AbuserSurnameFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfChildren0to6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfChildren7to12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfChildren13to18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateLastTransferred)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateClosed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReOpened)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbuserRelationship.Relationship)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age.Range)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedWorker.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crisis.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuplicateFile.YesOrNull)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ethnicity.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyViolenceFile.FileExists)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FiscalYear.Years)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Incident.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Program.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferralContact.Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferralSource.Source)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatClient.YesOrNull)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RiskLevel.Level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RiskStatus.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service.File)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusOfFile.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VictimOfIncident.PrimaryOrSecondary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Day)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliceFileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtFileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SWCFileNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RiskAssessmentAssignedTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbuserSurnameFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfChildren0to6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfChildren7to12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfChildren13to18)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateLastTransferred)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateClosed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReOpened)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClientReferenceNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClientReferenceNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClientReferenceNumber })
+        </td>
+    </tr>
+}
+
+</table>
