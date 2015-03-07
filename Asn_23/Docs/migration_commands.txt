@@ -1,0 +1,5 @@
+GoodSamaritan Seeding: 
+update-database -ConfigurationTypeName Asn_23.Migrations.GoodSamaritan.Configuration
+
+User Seeding: 
+update-database -ConfigurationTypeName Asn_23.Migrations.Users.Configuration
